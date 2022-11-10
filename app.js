@@ -19,7 +19,7 @@
 const mainContainer = document.getElementById('container');
 
 const aDiv = document.createElement('div');
-aDiv.style.backgroundColor = 'green';
+aDiv.classList.add('divSq');
 aDiv.textContent = 'this is a div';
 
 mainContainer.appendChild(aDiv);
