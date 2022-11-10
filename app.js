@@ -1,12 +1,25 @@
-//
-const container = document.getElementById('container');
-container.addEventListener('mouseover', mOverFunc);
-container.addEventListener('mouseout', mOutFunc);
+// starting etch a sketch project - 11.10.22
 
-function mOverFunc() {
-    container.style.backgroundColor = 'green';
-}
+// const container = document.getElementById('container');
+// container.addEventListener('mouseover', mOverFunc);
+// container.addEventListener('mouseout', mOutFunc);
 
-function mOutFunc() {
-    container.style.backgroundColor = '#d39595';
-}
+// function mOverFunc() {
+//     container.style.backgroundColor = 'green';
+// }
+
+// function mOutFunc() {
+//     container.style.backgroundColor = '#d39595';
+// }
+
+// create a div within container
+// create element -> the div
+// append into container
+
+const mainContainer = document.getElementById('container');
+
+const aDiv = document.createElement('div');
+aDiv.style.backgroundColor = 'green';
+aDiv.textContent = 'this is a div';
+
+mainContainer.appendChild(aDiv);
