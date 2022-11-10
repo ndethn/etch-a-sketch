@@ -19,7 +19,7 @@
 const mainContainer = document.getElementById('container');
 
 const aDiv = document.createElement('div');
-aDiv.classList.add('divSq');
+aDiv.setAttribute('id', 'divSq');
 aDiv.textContent = 'this is a div';
 
 mainContainer.appendChild(aDiv);
