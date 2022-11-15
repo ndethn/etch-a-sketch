@@ -1,23 +1,21 @@
 #container {
-    display: flex ;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: grid;
     background-color: #d39595;
     color: white;
     width: 600px;
     height: 600px;
-    flex-wrap: wrap;
 }
 
 #divSq {
     display: flex;
     background-color: black;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 #newDiv {
     background-color: green;
-    width: 50px;
-    height: 50px;
+    display: grid;
+    width: 100px;
+    height: 100px;
 }

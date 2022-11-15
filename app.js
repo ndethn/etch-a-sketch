@@ -16,9 +16,13 @@ mainContainer.appendChild(aDiv);
 const button = document.getElementById('button');
 button.addEventListener('click', addDiv);
 
-// create new div
+// create a 16 row grid
 function addDiv() {
-    const newDiv = document.createElement('div');
-    newDiv.setAttribute('id','newDiv');
-    mainContainer.appendChild(newDiv);
+    let rowMax = 16;
+    for (let i = 0; i < rowMax.length; i++) {
+        const newDiv = document.createElement('div');
+        newDiv[i].setAttribute('id','newDiv');
+        mainContainer.appendChild(newDiv[i]);
+        newDiv[i].textContent = 'hi';
+    }
 }
