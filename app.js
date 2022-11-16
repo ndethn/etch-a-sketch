@@ -25,3 +25,20 @@ function addDiv() {
         container.appendChild(square);
     }
 };
+
+// hover effect
+// add event listener -> mouseover and mouseout
+// declare these adding a new class to a div
+// style that new class div that have a specific change in color
+// or changing the div's background color
+
+// declare newDiv ref
+const colorDiv = document.getElementById('newDiv');
+colorDiv.addEventListener('mouseover', () => {
+    colorDiv.style.backgroundColor = 'blue';
+});
+
+// declare changeColor function
+// function changeColor(e) {
+//     colorDiv.style.backgroundColor = 'blue';
+// }
