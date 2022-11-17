@@ -20,7 +20,7 @@ function makeDiv() {
 };
 
 // querySelectorAll divs to place into an html collection
-// const allNewDivs = document.querySelectorAll('#newDiv');
+const allNewDivs = document.querySelectorAll('#newDiv');
 
 // run a function through each of the elements within the collection
 // to change the color of each element
@@ -48,10 +48,16 @@ function colorGrid() {
 const btn = document.getElementById('grid-button');
 btn.addEventListener('click', () => {
     let userInput = parseInt(prompt('enter grid size: '));
+
+    mainContainer.style.gridTemplateColumns = 'none';
+    mainContainer.style.gridTemplateRows = 'none';
+    
     if (userInput) {
+    
         let newNum = userInput;
         num = newNum;
         mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+        mainContainer.style.gridTemplateRows = `repeat(${num}, 1fr)`;
         makeDiv();
         colorGrid();
         console.log(num);
