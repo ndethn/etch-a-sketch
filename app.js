@@ -4,17 +4,20 @@
 const mainContainer = document.getElementById('container');
 
 // create a 16 x 16 grid
-let num = 16;
+let num;
 
 // style grid cols
 mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
 
 // iterate num of divs
-for (let i = 0; i < num * num; i++) {
-    const square = document.createElement('div');
-    square.setAttribute('id', 'newDiv');
-    container.appendChild(square);
-}
+// create div function
+function makeDiv() {
+    for (let i = 0; i < num * num; i++) {
+        const square = document.createElement('div');
+        square.setAttribute('id', 'newDiv');
+        container.appendChild(square);
+    }
+};
 
 // querySelectorAll divs to place into an html collection
 const allNewDivs = document.querySelectorAll('#newDiv');
@@ -45,6 +48,7 @@ btn.addEventListener('click', () => {
     if (userInput) {
         let newNum = userInput;
         num = newNum;
+        makeDiv();
         console.log(num);
     } else {
         alert('enter an integer');
