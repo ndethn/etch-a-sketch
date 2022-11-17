@@ -23,6 +23,6 @@ const allNewDivs = document.querySelectorAll('#newDiv');
 // to change the color of each element
 allNewDivs.forEach(function (element) {
     element.addEventListener('mouseover', () => {
-        element.style.backgroundColor = 'blue';
+        element.style.backgroundColor = '#522d89';
     });
 });
