@@ -26,3 +26,11 @@ allNewDivs.forEach(function (element) {
         element.style.backgroundColor = '#522d89';
     });
 });
+
+// create a button that will prompt user for integer
+// single number input representing a different grid size num x num
+// we can use an onclick event within the button or
+// create an addEventListener for the click
+// within the function: prompt the user for single number
+// use input to be referenced into the above if statement
+// to create an appropriate set of newDiv's within the same mainContainer
