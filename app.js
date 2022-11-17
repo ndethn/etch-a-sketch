@@ -4,7 +4,7 @@
 const mainContainer = document.getElementById('container');
 
 // create a 16 x 16 grid
-let num = 16;
+let num;
 
 // style grid cols
 mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -35,8 +35,19 @@ allNewDivs.forEach(function (element) {
 // use input to be referenced into the above if statement
 // to create an appropriate set of newDiv's within the same mainContainer
 
+// need to create a new function for the if statement above
+// if user input is a number, run this function
+// a function that creates the new divs 
+
 const btn = document.getElementById('grid-button');
 btn.addEventListener('click', () => {
-    let userInput = prompt('enter grid size: ');
-    console.log(userInput);
-})
+    let userInput = parseInt(prompt('enter grid size: '));
+    if (userInput) {
+        let newNum = userInput;
+        num = newNum;
+        console.log(num);
+    } else {
+        alert('enter an integer');
+    }
+});
+
