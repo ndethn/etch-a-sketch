@@ -49,10 +49,17 @@ colorDiv.addEventListener('mouseover', () => {
 // on each newDiv within the collection
 
 const allNewDivs = document.querySelectorAll('#newDiv');
-document.addEventListener('mouseover', () => {
-    colorDiv.style.backgroundColor = 'blue';
-    allNewDivs.setAttribute('class', 'colorDiv');
+
+allNewDivs.forEach(function(element) {
+    element.addEventListener('mouseover', () => {
+        element.style.backgroundColor = 'blue';
+    });
 });
+
+// document.addEventListener('mouseover', () => {
+//     colorDiv.style.backgroundColor = 'blue';
+//     allNewDivs.setAttribute('class', 'colorDiv');
+// });
 
 // function changeColor () {
    
