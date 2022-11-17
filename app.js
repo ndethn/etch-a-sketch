@@ -20,15 +20,18 @@ function makeDiv() {
 };
 
 // querySelectorAll divs to place into an html collection
-const allNewDivs = document.querySelectorAll('#newDiv');
+// const allNewDivs = document.querySelectorAll('#newDiv');
 
 // run a function through each of the elements within the collection
 // to change the color of each element
-allNewDivs.forEach(function (element) {
-    element.addEventListener('mouseover', () => {
-        element.style.backgroundColor = '#522d89';
+function colorGrid() {
+    const allNewDivs = document.querySelectorAll('#newDiv');
+    allNewDivs.forEach(function (element) {
+        element.addEventListener('mouseover', () => {
+            element.style.backgroundColor = '#522d89';
+        });
     });
-});
+};
 
 // create a button that will prompt user for integer
 // single number input representing a different grid size num x num
@@ -50,9 +53,9 @@ btn.addEventListener('click', () => {
         num = newNum;
         mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
         makeDiv();
+        colorGrid();
         console.log(num);
     } else {
         alert('enter an integer');
     }
 });
-
