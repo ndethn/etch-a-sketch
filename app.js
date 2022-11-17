@@ -48,6 +48,7 @@ btn.addEventListener('click', () => {
     if (userInput) {
         let newNum = userInput;
         num = newNum;
+        mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
         makeDiv();
         console.log(num);
     } else {
