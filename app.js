@@ -34,3 +34,9 @@ allNewDivs.forEach(function (element) {
 // within the function: prompt the user for single number
 // use input to be referenced into the above if statement
 // to create an appropriate set of newDiv's within the same mainContainer
+
+const btn = document.getElementById('grid-button');
+btn.addEventListener('click', () => {
+    let userInput = prompt('enter grid size: ');
+    console.log(userInput);
+})
