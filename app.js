@@ -9,8 +9,7 @@ let num;
 // style grid cols
 mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
 
-// iterate num of divs
-// create div function
+// create div function to iterate num of divs
 function makeDiv() {
     for (let i = 0; i < num * num; i++) {
         const square = document.createElement('div');
@@ -33,27 +32,15 @@ function colorGrid() {
     });
 };
 
-// create a button that will prompt user for integer
-// single number input representing a different grid size num x num
-// we can use an onclick event within the button or
-// create an addEventListener for the click
-// within the function: prompt the user for single number
-// use input to be referenced into the above if statement
-// to create an appropriate set of newDiv's within the same mainContainer
-
-// need to create a new function for the if statement above
-// if user input is a number, run this function
-// a function that creates the new divs 
-
+// create event for the button to change grid size
 const btn = document.getElementById('grid-button');
 btn.addEventListener('click', () => {
     let userInput = parseInt(prompt('enter grid size: '));
-
+    // set the grid template to empty
     mainContainer.style.gridTemplateColumns = 'none';
     mainContainer.style.gridTemplateRows = 'none';
-    
+    // take userInput to set the new grid size
     if (userInput) {
-    
         let newNum = userInput;
         num = newNum;
         mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -62,6 +49,7 @@ btn.addEventListener('click', () => {
         colorGrid();
         console.log(num);
     } else {
+        // if not an integer
         alert('enter an integer');
     }
 });
