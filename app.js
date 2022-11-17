@@ -42,3 +42,8 @@ colorDiv.addEventListener('mouseover', () => {
 // function changeColor(e) {
 //     colorDiv.style.backgroundColor = 'blue';
 // }
+
+// do we use querySelectorAll?
+// that way we can select all "newDiv"s
+// this will then be an html collection and we can run an event listener
+// on each within the collection
