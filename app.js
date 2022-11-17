@@ -8,11 +8,11 @@
 const mainContainer = document.getElementById('container');
 
 // create button to add new div inside main container
-const button = document.getElementById('button');
-button.addEventListener('click', addDiv);
+// const button = document.getElementById('button');
+// button.addEventListener('click', addDiv);
 
 // create a 16 row grid
-function addDiv() {
+// function addDiv() {
     let num = 16;
 
     // style grid cols
@@ -24,7 +24,7 @@ function addDiv() {
         square.setAttribute('id', 'newDiv');
         container.appendChild(square);
     }
-};
+// };
 
 // hover effect
 // add event listener -> mouseover and mouseout
