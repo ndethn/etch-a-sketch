@@ -4,7 +4,7 @@
 const mainContainer = document.getElementById('container');
 
 // create a 16 x 16 grid
-let num;
+let num = 16;
 
 // style grid cols
 mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
