@@ -11,7 +11,7 @@ const btn = document.getElementById('grid-button');
 btn.addEventListener('click', () => {
     let userInput = parseInt(prompt('enter grid size: '));
     // take userInput to set the new grid size
-    if (userInput) {
+    if (userInput && userInput <= 64) {
         num = userInput;
         // set column and rows for the grid template from userInput value
         mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -19,11 +19,11 @@ btn.addEventListener('click', () => {
         // invoke makeDiv and colorDiv functions
         makeDiv();
         colorDiv();
+        btn.disabled = true;
     } else {
         // if not an integer
-        alert('enter an integer');
+        alert('enter a valid integer less than 65');
     }
-    btn.disabled = true;
 });
 
 // create new divs into grid container
