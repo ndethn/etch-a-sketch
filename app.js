@@ -41,8 +41,7 @@ btn.addEventListener('click', () => {
     mainContainer.style.gridTemplateRows = 'none';
     // take userInput to set the new grid size
     if (userInput) {
-        let newNum = userInput;
-        num = newNum;
+        num = userInput;
         mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
         mainContainer.style.gridTemplateRows = `repeat(${num}, 1fr)`;
         makeDiv();
