@@ -58,4 +58,5 @@ resetBtn.addEventListener('click', () => {
     for (let emptyDiv of allNewDivs) {
         emptyDiv.remove();
     }
+    btn.disabled = false;
 });
