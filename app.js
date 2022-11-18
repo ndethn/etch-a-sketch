@@ -7,7 +7,7 @@ const mainContainer = document.getElementById('container');
 let num;
 
 // style grid cols
-mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+// mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
 
 // create div function to iterate num of divs
 function makeDiv() {
@@ -35,10 +35,9 @@ function colorGrid() {
 // create event for the button to change grid size
 const btn = document.getElementById('grid-button');
 btn.addEventListener('click', () => {
-    let userInput = parseInt(prompt('enter grid size: '));
     // set the grid template to empty
-    mainContainer.style.gridTemplateColumns = 'none';
-    mainContainer.style.gridTemplateRows = 'none';
+    clearContainer();
+    let userInput = parseInt(prompt('enter grid size: '));
     // take userInput to set the new grid size
     if (userInput) {
         num = userInput;
@@ -52,3 +51,8 @@ btn.addEventListener('click', () => {
         alert('enter an integer');
     }
 });
+
+function clearContainer() {
+    mainContainer.style.gridTemplateColumns = 'none';
+    mainContainer.style.gridTemplateRows = 'none';
+}
