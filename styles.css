@@ -3,7 +3,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+}
+
+h3 {
+    font-size: larger;
+    padding: 5px;
+    margin: ;
 }
 
 #container {
@@ -26,4 +31,8 @@ button {
     border: 3px solid black;
     border-radius: 10px;
     margin: 10px;
+}
+
+button:hover {
+    background-color: rgb(209, 209, 209);
 }
