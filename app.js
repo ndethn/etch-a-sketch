@@ -27,7 +27,7 @@ function colorGrid() {
     const allNewDivs = document.querySelectorAll('#newDiv');
     allNewDivs.forEach(function (element) {
         element.addEventListener('mouseover', () => {
-            element.style.backgroundColor = '#522d89';
+            element.style.backgroundColor = '#FF7474';
         });
     });
 };
