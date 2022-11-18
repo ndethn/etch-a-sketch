@@ -8,7 +8,6 @@ body {
 h3 {
     font-size: larger;
     padding: 5px;
-    margin: ;
 }
 
 #container {
@@ -35,4 +34,8 @@ button {
 
 button:hover {
     background-color: rgb(209, 209, 209);
+}
+
+#button-container {
+    margin: 10px;
 }
