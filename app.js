@@ -36,7 +36,7 @@ function colorGrid() {
 const btn = document.getElementById('grid-button');
 btn.addEventListener('click', () => {
     // set the grid template to empty
-    clearContainer();
+    // clearContainer();
     let userInput = parseInt(prompt('enter grid size: '));
     // take userInput to set the new grid size
     if (userInput) {
@@ -52,7 +52,15 @@ btn.addEventListener('click', () => {
     }
 });
 
-function clearContainer() {
+// // clear container
+// function clearContainer() {
+//     mainContainer.style.gridTemplateColumns = 'none';
+//     mainContainer.style.gridTemplateRows = 'none';
+// }
+
+// reset button
+const resetBtn = document.getElementById('reset-button');
+resetBtn.addEventListener('click'), () => {
     mainContainer.style.gridTemplateColumns = 'none';
     mainContainer.style.gridTemplateRows = 'none';
 }
