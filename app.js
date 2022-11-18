@@ -3,12 +3,10 @@
 // create main container
 const mainContainer = document.getElementById('container');
 
-// create a 16 x 16 grid
+// set number input by user
 let num;
 
 // style grid cols
-// mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
-
 // create div function to iterate num of divs
 function makeDiv() {
     for (let i = 0; i < num * num; i++) {
