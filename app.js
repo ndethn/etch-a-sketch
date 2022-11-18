@@ -6,8 +6,27 @@ const mainContainer = document.getElementById('container');
 // set number input by user
 let num;
 
-// style grid cols
-// create div function to iterate num of divs
+// create event for the button to change grid size
+const btn = document.getElementById('grid-button');
+btn.addEventListener('click', () => {
+    let userInput = parseInt(prompt('enter grid size: '));
+    // take userInput to set the new grid size
+    if (userInput) {
+        num = userInput;
+        // set column and rows for the grid template from userInput value
+        mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+        mainContainer.style.gridTemplateRows = `repeat(${num}, 1fr)`;
+        // invoke makeDiv and colorDiv functions
+        makeDiv();
+        colorDiv();
+    } else {
+        // if not an integer
+        alert('enter an integer');
+    }
+    btn.disabled = true;
+});
+
+// create new divs into grid container
 function makeDiv() {
     for (let i = 0; i < num * num; i++) {
         const square = document.createElement('div');
@@ -16,12 +35,12 @@ function makeDiv() {
     }
 };
 
-// querySelectorAll divs to place into an html collection
+// place new divs to place into an node list
 const allNewDivs = document.querySelectorAll('#newDiv');
 
-// run a function through each of the elements within the collection
-// to change the color of each element
-function colorGrid() {
+// change the color of each of the divs within the node list
+// when the mouse moves over it
+function colorDiv() {
     const allNewDivs = document.querySelectorAll('#newDiv');
     allNewDivs.forEach(function (element) {
         element.addEventListener('mouseover', () => {
@@ -30,26 +49,7 @@ function colorGrid() {
     });
 };
 
-// create event for the button to change grid size
-const btn = document.getElementById('grid-button');
-btn.addEventListener('click', () => {
-    let userInput = parseInt(prompt('enter grid size: '));
-    btn.disabled = true;
-    // take userInput to set the new grid size
-    if (userInput) {
-        num = userInput;
-        mainContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
-        mainContainer.style.gridTemplateRows = `repeat(${num}, 1fr)`;
-        makeDiv();
-        colorGrid();
-        console.log(num);
-    } else {
-        // if not an integer
-        alert('enter an integer');
-    }
-});
-
-// reset button
+// reset grid
 const resetBtn = document.getElementById('reset-button');
 resetBtn.addEventListener('click', () => {
     const allNewDivs = document.querySelectorAll('#newDiv');
