@@ -1,6 +1,6 @@
 #container {
     display: grid;
-    background-color: #d39595;
+    background-color: grey;
     width: 600px;
     height: 600px;
 }
