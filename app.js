@@ -69,5 +69,11 @@ randBtn.addEventListener('click', () => {
     for (let noColorDiv of allNewDivs) {
         noColorDiv.style.backgroundColor = '#008B8B';
     }
+    allNewDivs.forEach(function (element) {
+        element.addEventListener('mouseover', () => {
+            const randColor = Math.floor(Math.random()*16777215).toString(16);
+            element.style.backgroundColor = '#' + randColor;
+        });
+    });
     btn.disabled = true;
 });
