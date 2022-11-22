@@ -64,3 +64,10 @@ resetBtn.addEventListener('click', () => {
 // random color -> css background color change
 
 const randBtn = document.getElementById('random-button');
+randBtn.addEventListener('click', () => {
+    const allNewDivs = document.querySelectorAll('#newDiv');
+    for (let noColorDiv of allNewDivs) {
+        noColorDiv.style.backgroundColor = '#008B8B';
+    }
+    btn.disabled = true;
+});
