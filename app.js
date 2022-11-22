@@ -44,7 +44,7 @@ function colorDiv() {
     const allNewDivs = document.querySelectorAll('#newDiv');
     allNewDivs.forEach(function (element) {
         element.addEventListener('mouseover', () => {
-            element.style.backgroundColor = '#FF7474';
+            element.style.backgroundColor = 'grey';
         });
     });
 };
@@ -67,7 +67,7 @@ const randBtn = document.getElementById('random-button');
 randBtn.addEventListener('click', () => {
     const allNewDivs = document.querySelectorAll('#newDiv');
     for (let noColorDiv of allNewDivs) {
-        noColorDiv.style.backgroundColor = '#008B8B';
+        noColorDiv.style.backgroundColor = 'white';
     }
     allNewDivs.forEach(function (element) {
         element.addEventListener('mouseover', () => {
