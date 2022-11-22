@@ -59,10 +59,7 @@ resetBtn.addEventListener('click', () => {
     btn.disabled = false;
 });
 
-// add event listener to random color button
-// use mouse over event
-// random color -> css background color change
-
+// create button for random RGB values
 const randBtn = document.getElementById('random-button');
 randBtn.addEventListener('click', () => {
     const allNewDivs = document.querySelectorAll('#newDiv');
